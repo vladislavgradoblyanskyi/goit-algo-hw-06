@@ -51,6 +51,7 @@ class Record:
         
     def __str__(self):
         return f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
+         #magic func(for controlling its behavior on lower level)
     
 
 
@@ -73,6 +74,7 @@ class AddressBook(UserDict):
     
     def __str__(self):
         return "\n".join(str(record) for record in self.data.values())
+        #magic func(for controlling its behavior on lower level)
 
 
 def main():
