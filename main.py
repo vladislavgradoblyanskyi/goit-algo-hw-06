@@ -1,4 +1,3 @@
-from colorama import Fore
 from collections import UserDict
 
 
