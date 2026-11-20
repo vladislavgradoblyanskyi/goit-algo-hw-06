@@ -38,9 +38,11 @@ class Record:
                 self.phones.remove(phone)
 
     def edit_phone(self,old_number,new_number):
-        for phone in self.phones:
-            if phone.value==old_number:
-                phone.value=Phone(new_number).value
+        if not self.find_phone(old_number):
+            raise ValueError("phone not found")
+        else:
+            self.remove_phone(old_number)
+            self.add_phone(new_number)
                 
 
     def find_phone(self,number):
