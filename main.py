@@ -50,7 +50,7 @@ class Record:
         return None
         
     def __str__(self):
-        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
+        return f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
     
 
 
@@ -72,7 +72,7 @@ class AddressBook(UserDict):
     
     
     def __str__(self):
-        return f"{ {str(record) for record in self.data.values()} }"
+        return "\n".join(str(record) for record in self.data.values())
 
 
 def main():
